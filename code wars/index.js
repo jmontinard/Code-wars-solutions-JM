@@ -151,54 +151,100 @@
 // console.log(decompress(compress('aaabcd')))
 
 
-function solution(list){
+// function solution(list){
 
-  const sortedAr = list.sort((a,b)=> a-b)
+//   const sortedAr = list.sort((a,b)=> a-b)
 
 
 
-  let rtnArr = [],
-     arLen = sortedAr.length,
-     start = sortedAr[0],
-     stop = start,
-      result ='',
-      cnt = 0
+//   let rtnArr = [],
+//      arLen = sortedAr.length,
+//      start = sortedAr[0],
+//      stop = start,
+//       result ='',
+//       cnt = 0
 
-      for (let i = 1; i < arLen; i++) {   	
+//       for (let i = 1; i < arLen; i++) {   	
       
-        if (sortedAr[i] === stop+1) {
-          stop = sortedAr[i];
-        } else {
+//         if (sortedAr[i] === stop+1) {
+//           stop = sortedAr[i];
+//         } else {
           
-            if (start === stop) {
-          result += start + ', ';            
-            } else {
-              result += start + '-' + stop + ', ';
-            }
-            // reset the start and stop pointers
-            start = sortedAr[i];
-            stop = start;
-        }
-    }
+//             if (start === stop) {
+//           result += start + ', ';            
+//             } else {
+//               result += start + '-' + stop + ', ';
+//             }
+//             // reset the start and stop pointers
+//             start = sortedAr[i];
+//             stop = start;
+//         }
+//     }
 
 
-    if (start === stop) {
-      result += start;            
-  } else {
-      result += start + '-' + stop;
-  }
+//     if (start === stop) {
+//       result += start;            
+//   } else {
+//       result += start + '-' + stop;
+//   }
   
-  console.log(result);
+//   console.log(result);
 
 
   
   
- console.log(sortedAr)
+//  console.log(sortedAr)
 
- }
+//  }
   
   
- console.log( solution([-6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18,21, 19, 20]));
- // returns "-6,-3-1,3-5,7-11,14,15,17-20"
+//  console.log( solution([-6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18,21, 19, 20]));
+//  // returns "-6,-3-1,3-5,7-11,14,15,17-20"
  
-// objective for sep 23 finish the level 4 kyu 95% done 
+// // objective for sep 23 finish the level 4 kyu 95% done 
+
+
+
+
+
+
+//  Lvl 5 kyu BEERIMID
+
+
+// Let's pretend your company just hired your friend from college and paid you a referral bonus. Awesome! To celebrate, you're taking your team out to the terrible dive bar next door and using the referral bonus to buy, and build, the largest three-dimensional beer can pyramid you can. And then probably drink those beers, because let's pretend it's Friday too.
+// A beer can pyramid will square the number of cans in each level - 1 can in the top level, 4 in the second, 9 in the next, 16, 25...
+// Complete the beeramid function to return the number of complete levels of a beer can pyramid you can make, given the parameters of:
+// your referral bonus, and
+// the price of a beer can
+// For example:
+// beeramid(1500, 2); // should === 12
+// beeramid(5000, 3); // should === 16
+
+
+// Returns number of complete beeramid levels
+var beeramid = function(bonus, price) {
+  let $beer = 0,
+   level = 1;
+
+
+
+     for(let i = 0; $beer <= bonus; i++){
+      $beer += ((level**2) * 2 )
+    console.log(`level is ${level}`)
+    console.log($beer)
+    level++
+     }
+
+  // while($beer < bonus){
+  //   $beer += ((level**2) * 2 )
+  //   console.log(`level is ${level}`)
+  //   console.log($beer)
+  //   level++
+  // }
+
+  // return level-1
+
+}
+
+
+console.log(beeramid(1500, 2))
