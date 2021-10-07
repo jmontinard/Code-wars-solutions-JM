@@ -226,25 +226,34 @@ var beeramid = function(bonus, price) {
   let $beer = 0,
    level = 1;
 
+  if(bonus <= 0) level = 0
 
-
-     for(let i = 0; $beer <= bonus; i++){
-      $beer += ((level**2) * 2 )
+  while($beer < bonus){
+    $beer += ((level**2) * price )
     console.log(`level is ${level}`)
-    console.log($beer)
+    console.log( `((${level ** 2}) * ${price} )  =    ${$beer}`)
+    if($beer > bonus){
+      level -= 1
+      break
+    }else if($beer === bonus){
+      break;
+    }
     level++
-     }
+  }
 
-  // while($beer < bonus){
-  //   $beer += ((level**2) * 2 )
-  //   console.log(`level is ${level}`)
-  //   console.log($beer)
-  //   level++
-  // }
 
-  // return level-1
+ 
+
+
+   return level 
+
 
 }
 
 
-console.log(beeramid(1500, 2))
+// console.log(beeramid(1500, 2))
+// console.log(beeramid(455, 5))
+// console.log(beeramid(5000, 3))
+// console.log(beeramid(-1, 4))
+// console.log(beeramid(-1, 4))
+// console.log(beeramid(0, 4))
