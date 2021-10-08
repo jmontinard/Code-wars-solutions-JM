@@ -165,22 +165,30 @@ function solution(list){
       cnt = 0
 
       for (let i = 1; i < arLen; i++) {   	
-      
+        // console.log(`start is ${start} and this the ${i} iteration`)
+        // console.log(`stop is ${stop} and this the ${i} iteration`)
         if (sortedAr[i] === stop+1) {
           stop = sortedAr[i];
+         
         } else {
           
             if (start === stop) {
-          result += start + ', ';            
-            } else {
+          result += start + ', ';
+                     
+            } else   {
               result += start + '-' + stop + ', ';
-              cnt++
+              
             }
             // reset the start and stop pointers
             start = sortedAr[i];
             stop = start;
+            
+          }
+          console.log(`start is ${start} and this the ${i} iteration`)
+          console.log(`stop is ${stop} and this the ${i} iteration`)
+          console.log(`res is ${result} and this the ${i} iteration`)
+
         }
-    }
 
 
     if (start === stop) {
@@ -191,7 +199,7 @@ function solution(list){
   
   console.log(result);
 
-
+console.log(cnt)
   
   
  console.log(sortedAr)
