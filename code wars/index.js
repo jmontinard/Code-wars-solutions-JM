@@ -34,6 +34,34 @@
 //  return lampArr.join('')
 // }
 
+// Given 2 strings, a and b, return a string of the form: shorter+reverse(longer)+shorter.
+// In other words, the shortest string has to be put as prefix and as suffix of the reverse of the longest.
+// Strings a and b may be empty, but not null (In C# strings may also be null. Treat them as if they are empty.).
+// If a and b have the same length treat a as the longer producing b+reverse(a)+b
+
+
+// 7 kyu shorter concat [reverse longer]
+
+// Pre-code :
+// Given 2 str a,b 
+// Rtn them as shorter+reverse(longer)+shorter. So shorter one is prefix and suffix and longest one in reverse 
+// a,b may be empty but not null
+// If a and b have same length a is the longer one 
+//  Find out which has the longest length and check if they have same len 
+// Thn rtn easy 
+
+
+// Actual code:
+
+// function shorter_reverse_longer(a,b){
+// let rtnWord;
+// if(a.length > b.length || a.length === b.length ){
+//  rtnWord = `${b}${a.split('').reverse().join('')}${b}`
+// } else {
+//   rtnWord = `${a}${b.split('').reverse().join('')}${a}`
+// }
+//   return rtnWord
+
 
 
 // 7KYU Even or Odd - Which is Greater?
