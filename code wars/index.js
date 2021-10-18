@@ -343,3 +343,66 @@ console.log(cnt)
     
 //   }
 // }
+
+
+// Level 6 kyu - Travelling on a Grid
+
+
+
+// You have an 8x8 grid with coordinates ranging from 1 to 8. The origin (1, 1) is in the top left corner. The bottom right corner is (8, 8).
+// You are given a string as an input which will contain the 2 coordinates in this format: "(x1 y1)(x2 y2)", where (x1 y1) represents point A and (x2 y2) represents point B. In the inputs provided, point A will always be up and to the left of point B. In other words, x1 < x2 and y1 < y2 will be true for every input.
+// Your goal is to find out the number of different paths you can take to get from point A to point B by moving one cell at a time either down or right.
+// Example
+// Given an input of "(2 3)(3 5)", the number of possible paths to get from A to B is 3.
+
+
+// Pre-code 
+
+// Kinda tricky so given 2 coords (x1,y1)(a) and (x2,y2)(b) we know that a will always be to the top left 
+// What we need to figure out all the total paths it takes to get from a to b one cell at a time 
+// Im sure if we can figure the math to get to one point to another this will be easy
+// function fac(n){ return(n<2)?1:fac(n-1)*n; }
+// f=n=>(n<2)?1:f(n-1)*n
+// Find out distance xDis(x1 - x2)  right and down yDis (y1 - y2)   
+// Combination equation is fac(xDis + yDis /total) /(fac(xDis) * fac(yDis)) = combo
+// https://math.stackexchange.com/questions/636128/calculating-the-number-of-possible-paths-through-some-squares
+// https://betterexplained.com/articles/navigate-a-grid-using-combinations-and-permutations/
+
+
+
+// My code 
+ 
+// function fac(n){ return(n<2)?1:fac(n-1)*n; }
+
+// function travelChessboard(s){
+//  let cordinatesArr = s.split(''),
+//      x1 = Number(cordinatesArr[1]),
+//      y1 = Number(cordinatesArr[3]),
+//      x2 = Number(cordinatesArr[6]),
+//      y2 = Number(cordinatesArr[8])
+//  const xDis = (x2-x1)
+//  const yDis = (y2-y1)
+ 
+ 
+//  const comboEq = ( fac(xDis + yDis) / ( fac(xDis) * fac(yDis) ))
+ 
+ 
+//   return comboEq;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
