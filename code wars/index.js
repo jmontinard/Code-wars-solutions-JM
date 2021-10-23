@@ -575,3 +575,147 @@ console.log(cnt)
 //     return strArray.join('')   
 // }
 
+
+// 4 ) NUMBER FACTORIAL 
+
+
+
+/**
+* Test Suite 
+*/
+// describe('factorialNumber()', () => {
+//   it('returns factorial of number param', () => {
+//       // arrange
+//       const num = 5;
+      
+//       // act
+//       const result = factorialNumber(num);
+
+//       // log
+//       console.log("result: ", result);
+      
+//       // assert
+//       expect(result).toBe(120);
+//   });
+// });
+
+
+
+// MY CODE 
+
+// function factorialNumber(num) {
+//   // write code here
+//   // CRT A VAR TOTAL TO ADD UP ALL THE MULTIPLICATIONS 
+//   let total = 1
+//   // TAKE NUMBER AND TIMES IT BY THE NUMER LESS THAN IT SO FAC 5 = 1*2*3*4*5
+//   for(let i = 2; i <= num; i++){ total *=  i}
+  
+//   return total
+// }
+
+
+
+// 5 ) FIRST DIGIT FIND THE LEFTMOST DIGIT THAT OCCURS IN A GIVEN STR 
+
+
+
+/**
+* Test Suite 
+*/
+// describe('firstDigit()', () => {
+//   it('return the first digit in a string', () => {
+//       // arrange
+//       const str = "var_1__Int2";
+      
+//       // act
+//       const result = firstDigit(str);
+
+//       // log
+//       console.log("result: ", result);
+      
+//       // assert
+//       expect(result).toBe('1');
+//   });
+// });
+
+
+
+
+// MY CODE 
+// function firstDigit(str) {
+//   //  write code here.
+    
+//   //   CRT VAR TO HOLD NUM
+//     let firstNum;
+
+//   //SPLT STR LOOP THRU AND FIND THE FIRST NUM 
+//   let strSplit = str.split('')
+
+//   for(let i = 0; i < strSplit.length; i++){
+//       if( !isNaN(strSplit[i])){
+//           firstNum = strSplit[i]
+//           break // THIS STOPS THE LOOP AS SOON AS A NUM IS FOUND 
+//       }
+//   }
+    
+//     return firstNum
+// }
+
+
+// 6 ) lARGEST NUMBER 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MY CODE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 6 ) MAX MULTIPLE 
+
+
+
+
+
+
+// MY CODE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
