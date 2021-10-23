@@ -394,15 +394,130 @@ console.log(cnt)
 
 
 
+//------------------------------------------
+// scRIMBA js Advance Challenges 
+//------------------------------------------
+
+// 1) ARRAY REPLACE 
+  
+// gIVEN an ARRAY OF INTERGERS, replace  all the occurences of elmToreplace w/ subElem
+
+/**
+* Test Suite 
+*/
+// describe('arrayReplace()', () => {
+//     it('adds a border around entire application', () => {
+//         // arrange
+//         const array = [1, 2, 1];
+//         const elemToReplace = 1;
+//         const substitutionElem = 3;
+        
+//         // act
+//         const result = arrayReplace(array, elemToReplace, substitutionElem);
+
+//         // log
+//         console.log("result: ", result);
+        
+//         // assert
+//         expect(result).toEqual([3, 2, 3]);
+//     });
+// });
+
+
+// MY CODE 
+
+// function arrayReplace(array, elemToReplace, substitutionElem) {
+//   //  write code here.
+//   let huh = [...array]
+
+//        for(let i = 0; i <= huh.length; i++){
+//         if(huh[i] === elemToReplace){
+//           huh[i] = substitutionElem
+//         }
+//        }
+//  return huh
+// }
+
+//  rAN into Map and for of problems, both would return all values as undef super aggy and e
 
 
 
 
+// 2) CASE INSENSITIVE PALINDROME 
 
 
+// /**
+// * Test Suite 
+// */
+// describe('caseInsensitivePalindrome()', () => {
+//     it('returns true for a case insensitive palindrome', () => {
+//         // arrange
+//         const str = 'AaBaa';
+        
+//         // act
+//         const result = caseInsensitivePalindrome(str);
+
+//         // log
+//         console.log("result 1: ", result);
+        
+//         // assert
+//         expect(result).toBe(true);
+//     });
+    
+//     it('returns false when not a case insensitive palindrome', () => {
+//         // arrange
+//         const str = 'abac';
+        
+//         // act
+//         const result = caseInsensitivePalindrome(str);
+
+//         // log
+//         console.log("result 2: ", result);
+        
+//         // assert
+//         expect(result).toBe(false);
+//     });    
+// });
+
+// MY CODE did it the long way 
+
+// function caseInsensitivePalindrome(str) {
+//   //  write code here.
+  
+//   //FIND A WAY TO REVERSE STR WITHOUT REVERSE()
+//    let rev = []
+//    let strSpt = str.toLowerCase().split('')
+//     let copy = [...strSpt].map(v => rev.unshift(v))
+   
+
+    
+//   // COMPARE REV STR TO OG STR AND CHECK IF EACH INDEX MATCHES EACH OTHER
+//       for(let i = 0; i < strSpt.length; i++){
+//   //RTN T/F IF DEPENDING ON CONDO
+//           if(strSpt[i] === rev[i]) return true
+//           return false
+//       }
+
+// }
+
+// could have done it like this 
+
+// function caseInsensitivePalindrome(str) {
+//   const caselessStr = str.toLowerCase();
+//   const reversedCaselessStr = caselessStr.split('').reverse().join(''); 
+  
+//   return caselessStr === reversedCaselessStr;
+// }
 
 
-
-
-
-
+// function caseInsensitivePalindrome(str) {
+//   const caselessStr = str.toLowerCase();
+//   // const reversedCaselessStr = caselessStr.split('').reverse().join(''); 
+//   let reversedCaselessStr = '';
+  
+//   for(let i = caselessStr.length - 1; i >= 0; i--) {
+//       reversedCaselessStr += caselessStr[i];
+//   }
+  
+//   return caselessStr === reversedCaselessStr;
+// }
