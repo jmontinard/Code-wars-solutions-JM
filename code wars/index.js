@@ -662,7 +662,7 @@ console.log(cnt)
 // }
 
 
-// 6 ) lARGEST NUMBER 
+// 6 ) lARGEST NUMBER  FOR EX N=2 THE OUTPUT SHOULD BE lARGESTNUM(N) = 99
 
 
 
@@ -678,6 +678,21 @@ console.log(cnt)
 
 
 // MY CODE 
+
+function largestNumber(num) {
+  //  write code here.
+  let lrgstNum = 1
+  
+  do {
+   largestNumber++   
+   console.log(lrgstNum)
+  }
+  while( lrgstNum.toString().length <= num)
+  
+  
+} 
+
+console.log(largestNumber(2))
 
 
 
