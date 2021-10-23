@@ -521,3 +521,57 @@ console.log(cnt)
   
 //   return caselessStr === reversedCaselessStr;
 // }
+
+
+// 3) ENCLOSED BRACKETS IN 3 WAYS 
+
+
+
+
+
+
+
+/**
+* Test Suite 
+*/
+// describe('encloseInBrackets()', () => {
+//   it('adds () around a string', () => {
+//       // arrange
+//       const str = "Yo";
+      
+//       // act
+//       const result = encloseInBrackets(str);
+
+//       // log
+//       console.log("result: ", result);
+      
+//       // assert
+//       expect(result).toBe('(Yo)');
+//   });
+// });
+
+
+// MY CODE 
+// function encloseInBrackets(str) {
+//     //  write code here.
+    
+//     // ADD IN A ( ) TO BEGIN AND EN
+// str =  str.padStart(5,'(') 
+//  str= str.padEnd(6,')') 
+     
+//     //RTN 
+//     return str
+    
+// }
+// function encloseInBrackets(str) {
+//     return `(${str})`   
+// }
+
+// function encloseInBrackets(str) {
+//      let strArray = str.split('')
+//       strArray.unshift('(')
+//       strArray.push(')')
+      
+//     return strArray.join('')   
+// }
+
