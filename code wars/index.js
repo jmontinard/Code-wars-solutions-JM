@@ -666,39 +666,37 @@ console.log(cnt)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // MY CODE 
+// function largestNumber(num) {
+//   //  write code here.
+//   let largestDigit ='9'.repeat(num)
 
-function largestNumber(num) {
-  //  write code here.
-  let lrgstNum = 1
-  
-  do {
-   largestNumber++   
-   console.log(lrgstNum)
-  }
-  while( lrgstNum.toString().length <= num)
-  
-  
-} 
+// // we want to find the largest num based of len of n so 2 = 99 3 = 999
 
-console.log(largestNumber(2))
+
+// return  Number(largestDigit)
+// }
 
 
 
+// /**
+// * Test Suite 
+// */
+// describe('largestNumber()', () => {
+//   it('returns largest positive integer possible for digit count', () => {
+//       // arrange
+//       const num = 2;
+      
+//       // act
+//       const result = largestNumber(num);
 
-
-
+//       // log
+//       console.log("result: ", result);
+      
+//       // assert
+//       expect(result).toBe(99);
+//   });
+// });
 
 
 
@@ -709,12 +707,42 @@ console.log(largestNumber(2))
 
 // 6 ) MAX MULTIPLE 
 
+// function maxMultiple(divisor, bound) {
+//   //  write code here.
+//     // need to find the largest num thats div by divs and is greater than 0 and less than bound
+// let i = 0,
+//  lrgD; 
+// // loop thru and div
+// for(i; i <= bound; i++){
+//   if(i % divisor == 0) lrgD = i
+// }
+// return lrgD
+// }
 
 
 
+// /**
+// * Test Suite 
+// */
+// describe('maxMultiple()', () => {
+//   it('returns largest integer up to boundary', () => {
+//       // arrange
+//       const divisor = 3;
+//       const bound = 10;
+      
+//       // act
+//       const result = maxMultiple(divisor, bound);
+
+//       // log
+//       console.log("result: ", result);
+      
+//       // assert
+//       expect(result).toBe(9);
+//   });
+// });
 
 
-// MY CODE 
+
 
 
 
